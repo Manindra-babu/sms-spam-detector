@@ -1,3 +1,6 @@
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![Status](https://img.shields.io/badge/Deployment-Live-success)
+
 # 🚀 SpamGuard – Intelligent SMS Spam Detection System
 
 ## 📌 Overview
