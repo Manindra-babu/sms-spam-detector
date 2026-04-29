@@ -1,153 +1,76 @@
-![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
-![Status](https://img.shields.io/badge/Deployment-Live-success)
-
 # 🚀 SpamGuard – Intelligent SMS Spam Detection System
 
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![Status](https://img.shields.io/badge/Deployment-Live-success)
+![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Space-Live-yellow)
+
 ## 📌 Overview
+Spam messages are a major issue in digital communication, often used for scams and phishing attacks. This project builds a deep learning-based system that classifies SMS messages as **Spam** or **Not Spam** using advanced Natural Language Processing (NLP) techniques.
 
-Spam messages are a major issue in digital communication, often used for scams and phishing attacks.
-This project builds a deep learning-based system that classifies SMS messages as **Spam** or **Not Spam** using Natural Language Processing (NLP) techniques.
-
-The model is built using PyTorch and deployed as a web application for real-time predictions.
+Unlike standard models, SpamGuard is built by fine-tuning a custom **GPT (Generative Pre-trained Transformer)** architecture from scratch using PyTorch.
 
 ---
 
 ## 🌐 Live Demo
+The application is deployed on Hugging Face Spaces for real-time inference.
 
-🔗 https://your-app-name.onrender.com
+🔗 **[Click here to test the SpamGuard UI](https://huggingface.co/spaces/mani-359/spam-detector-ui)**
 
 ---
 
 ## 🎯 Features
-
-* 📩 Real-time SMS spam classification
-* 🧠 Deep learning model built with PyTorch
-* ⚡ Fast prediction with optimized inference
-* 🌐 Deployed web app using Render
+* 📩 **Real-time Classification:** Instant spam detection via a web interface.
+* 🧠 **GPT-Powered:** Uses a 124M parameter Transformer architecture.
+* ⚡ **Optimized Inference:** PyTorch-based backend for millisecond response times.
+* ☁️ **Cloud Native:** Dynamically pulls model weights from Hugging Face LFS.
 
 ---
 
 ## 🛠️ Tech Stack
-
-* Python
-* PyTorch (Deep Learning)
-* NLP (Text preprocessing, tokenization)
-* TF-IDF / Embeddings (based on your approach)
-* Flask / Streamlit
-* Render (Deployment)
+* **Language:** Python
+* **Deep Learning Framework:** PyTorch
+* **Architecture:** GPT-based Transformer (Multi-Head Attention, LayerNorm, GELU)
+* **Tokenization:** Tiktoken (BPE Encoding)
+* **Deployment:** Hugging Face Spaces & Streamlit
 
 ---
 
 ## 🧠 Model Architecture
-
-This project uses a deep learning model implemented in PyTorch:
-
-* Text preprocessing and tokenization
-* Conversion to numerical representation (TF-IDF / embeddings)
-* Neural network model (e.g., Feedforward / LSTM / your model)
-* Binary classification output (Spam / Not Spam)
-
-*(Update this section with your exact model — very important)*
+This project implements a high-performance Transformer model:
+* **Custom Architecture:** Multi-layer Transformer blocks featuring self-attention and feed-forward networks.
+* **Weights:** Fine-tuned on SMS datasets and saved as PyTorch `.pth` files.
+* **Inference Pipeline:** 1. Text is tokenized using GPT-2 Byte Pair Encoding.
+    2. Numerical vectors pass through 12 Transformer layers.
+    3. A final classification head determines the "Spam" probability.
 
 ---
 
 ## 📊 Model Performance
-
-* Accuracy: 95.67%
-* Precision: 97.92%
-* Recall: 93.38%
-
----
-
-## 💻 Demo Example
-
-Input:
-"Amazon Alert: Your package #AMZ99482-B is pending delivery. A $2.99 customs fee is required. Please pay at https://amzn-delivery-fees.net to release your parcel within 24hrs."
-
-Output:
-🚨 Spam
+* **Accuracy:** 95.67%
+* **Precision:** 97.92%
+* **Recall:** 93.38%
 
 ---
 
 ## 📂 Project Structure
-
-```id="v4qk2o"
+```text
 sms-spam-detector/
-│── data/
-│── notebooks/
-│── src/
-│   ├── preprocess.py
-│   ├── model.py
-│   ├── predict.py
-│── app/
-│   ├── app.py
-│── models/
-│── requirements.txt
-│── README.md
-```
+│── app.py                # Streamlit UI & Cloud Inference Logic
+│── gpt_archticture.py    # Custom GPT Architecture & Transformer Blocks
+│── requirements.txt      # Project Dependencies
+│── README.md             # Documentation
 
----
-
-## ⚙️ Installation
-
-```bash id="c9p1fj"
-git clone https://github.com/your-username/sms-spam-detector
+# Clone the repository
+git clone [https://github.com/Manindra-babu/sms-spam-detector](https://github.com/Manindra-babu/sms-spam-detector)
 cd sms-spam-detector
+
+# Install dependencies
 pip install -r requirements.txt
-```
 
----
+# Run the app locally
+streamlit run app.py
 
-## ▶️ Run Locally
-
-For Flask:
-
-```bash id="t8g2rw"
-python app/app.py
-```
-
-For Streamlit:
-
-```bash id="4q9yxp"
-streamlit run app/app.py
-```
-
----
-
-## 🚀 Deployment (Render)
-
-This project is deployed using Render.
-
-Build Command:
-
-```bash id="g1sz9n"
-pip install -r requirements.txt
-```
-
-Start Command:
-
-```bash id="xj4k1r"
-python app/app.py
-```
-
----
-
-## 🔮 Future Improvements
-
-* Use transformer-based models (BERT / LLMs)
-* Improve accuracy with larger datasets
-* Add multilingual spam detection
-* Build API for integration
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-## 👨‍💻 Author
-
-CH.V.Manindra Babu
-AIML Student | Deep Learning & AI Enthusiast 🚀
+👨‍💻 Author
+CH. V. Manindra Babu
+B.Tech in Artificial Intelligence & Machine Learning (AIML)
+Aditya University, Andhra Pradesh | Class of 2028
