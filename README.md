@@ -60,17 +60,7 @@ sms-spam-detector/
 │── requirements.txt      # Project Dependencies
 │── README.md             # Documentation
 
-# Clone the repository
-git clone [https://github.com/Manindra-babu/sms-spam-detector](https://github.com/Manindra-babu/sms-spam-detector)
-cd sms-spam-detector
 
-# Install dependencies
-pip install -r requirements.txt
 
-# Run the app locally
-streamlit run app.py
 
-👨‍💻 Author
-CH. V. Manindra Babu
-B.Tech in Artificial Intelligence & Machine Learning (AIML)
-Aditya University, Andhra Pradesh | Class of 2028
+
